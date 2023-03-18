@@ -18,6 +18,7 @@ return [
         'passwords' => 'users',
     ],
 
+    'token' => "GAvbJtL4549mxLI6Q7zIDoVblFBOaXM71ByTNS33",
     /*
     |--------------------------------------------------------------------------
     | Authentication Guards
@@ -38,6 +39,11 @@ return [
     'guards' => [
         'web' => [
             'driver' => 'session',
+            'provider' => 'users',
+        ],
+
+        'api' => [
+            'driver' => 'passport',
             'provider' => 'users',
         ],
     ],
